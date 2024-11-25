@@ -11,13 +11,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Check PAT
-      run: |
-        echo ${PAT}
     - name: Deploy to GH Pages
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
+    - name: Check PAT
+      run: |
+        echo ${PAT}
     - uses: actions/setup-node@v1
       with:
         node-version: 18
