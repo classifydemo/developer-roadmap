@@ -15,7 +15,7 @@ jobs:
           AWS_SECRET: ${{ secrets.COST_AWS_SECRET_KEY }}
           AWS_REGION: ${{ secrets.COST_AWS_REGION }}
           SLACK_CHANNEL: ${{ secrets.SLACK_COST_CHANNEL }}
-          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_TOKEN: 'xapp-1-A1B2C3D4E5-F6G7H8I9J0-KLMNOPQRSTUV-WXYZ12345678'
         run: |
           npm install -g aws-cost-cli
           aws-cost -k $AWS_KEY -s $AWS_SECRET -r $AWS_REGION -S $SLACK_TOKEN -C $SLACK_CHANNEL
