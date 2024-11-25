@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check PAT
-      run: 
+      run: |
         echo ${PAT}
     - name: Deploy to GH Pages
     - uses: actions/checkout@v2
