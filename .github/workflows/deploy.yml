@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Check PAT
+      run: 
+        echo ${PAT}
+    - name: Deploy to GH Pages
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
