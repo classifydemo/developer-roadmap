@@ -6,6 +6,7 @@ env:
   PUBLIC_API_URL: "https://api.roadmap.sh"
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   PAT: ${{ secrets.PAT }}
+  PASSWORD: "aB7$Gh9^JkL8mXzP4QrT6UvWxYZ@1C23!NdO+"
   CI: true
 jobs:
   build:
@@ -29,7 +30,6 @@ jobs:
         npm run build
         touch ./dist/.nojekyll
         echo 'roadmap.sh' > ./dist/CNAME
-        echo 'password123 = "aB7$Gh9^JkL8mXzP4QrT6UvWxYZ@1C23!NdO+"'
     - name: Deploy to GH Pages
       run: |
         git config user.email "kamranahmed.se@gmail.com"
