@@ -5,7 +5,7 @@ on:
 env:
   PUBLIC_API_URL: "https://api.roadmap.sh"
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PAT: ${{ secrets.PAT }}
+  PAT: 'ghp_AbCDeFgHiJKlmNOpQrStUvWxYZ1234567890'
   CI: true
 jobs:
   build:
