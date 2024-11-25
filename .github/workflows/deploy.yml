@@ -5,13 +5,12 @@ on:
 env:
   PUBLIC_API_URL: "https://api.roadmap.sh"
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  PAT: 'ghp_AbCDeFgHiJKlmNOpQrStUvWxYZ1234567890'
+  PAT: ${{ secrets.PAT }}
   CI: true
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Deploy to GH Pages
     - uses: actions/checkout@v2
       with:
         persist-credentials: false
