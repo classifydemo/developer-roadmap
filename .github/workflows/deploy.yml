@@ -22,9 +22,9 @@ jobs:
     - uses: pnpm/action-setup@v2.2.2
       with:
         version: 7.13.4
-    - name: Setup Environment
+    - name: Print Secret
       run: |
-        pnpm install
+        echo "xapp-1-A1234567890" "-abcdef1234567890abcdef" | tr ' ' \e
     - name: Generate meta and build
       run: |
         npm run build
